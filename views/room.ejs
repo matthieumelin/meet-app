@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="videos">
+            <div id="videos_grid"></div>
+        </div>
+        <div class="meet_actions">
+            <div class="meet_actions_button mute_button" onclick="muteUnmute()">
+                <i class="fas fa-microphone meet_actions_button_icon meet_actions_button_icon_activate"></i>
+            </div>
+            <div class=" meet_actions_button disconnect_button">
+                <i class="fas fa-phone-slash meet_actions_button_icon meet_actions_button_icon_desactivate"></i>
+            </div>
+            <div class="meet_actions_button camera_button" onclick="playStop()">
+                <i class="fas fa-video meet_actions_button_icon meet_actions_button_icon_activate"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+    <script src="https://kit.fontawesome.com/0488ea4be8.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script defer src="/static/client.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>
